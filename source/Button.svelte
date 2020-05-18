@@ -2,14 +2,21 @@
 </script>
 
 <script lang="typescript">
+export let name: string = "Button";
 </script>
 
+<!-- MARKUP ------------------------------------------------------------------->
+
 <button>
-    Hello Svelte!
+Hello, {name}!!
 </button>
 
+<!-- STYLES ------------------------------------------------------------------->
+
 <style type="text/scss">
-    button {
-        background-color: red;
-    }
+@import "theme";
+
+button {
+    background: $color-primary;
+}
 </style>
