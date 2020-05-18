@@ -1,9 +1,15 @@
-const sveltePreprocess  = require("svelte-preprocess");
+const sveltePreprocess = require("svelte-preprocess");
+const tailwindCSS = require("tailwindcss");
+const autoprefixer = require("autoprefixer");
 
 module.exports = {
     preprocess: sveltePreprocess({
         typescript: {
-            compilerOptions: { noEmit: false }
-        }
+            tsconfigDirectory: ".",
+            compilerOptions: { noEmit: false },
+        },
+        postcss: {
+            plugins: [tailwindCSS, autoprefixer],
+        },
     }),
 };

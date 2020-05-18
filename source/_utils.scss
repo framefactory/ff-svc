@@ -1,0 +1,9 @@
+@use "theme";
+
+.bg {
+    @each $name, $color in $colors-midnight {
+        &-#{$name} {
+            background-color: $color;
+        }
+    }
+}
