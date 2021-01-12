@@ -1,9 +1,12 @@
 {
-    "name": "ff-svc",
+    "name": "@fflib/svc",
     "version": "1.0.0",
     "description": "FF Svelte Component Library",
-    "scripts": {
+    "type": "module",
+    "exports": {
+        "./": "./source/"
     },
+    "scripts": {},
     "repository": {
         "type": "git",
         "url": "git+https://github.com/framelab/ff-svc.git"
@@ -15,22 +18,12 @@
     ],
     "author": {
         "name": "Ralph Wiedemeier",
-        "url": "https://about.me/ralphw"
+        "url": "https://github.com/framefactory"
     },
     "license": "MIT",
     "bugs": {
         "url": "https://github.com/framelab/ff-svc/issues"
     },
     "homepage": "https://github.com/framelab/ff-svc#readme",
-    "devDependencies": {
-        "autoprefixer": "^9.8.0",
-        "module-alias": "^2.2.2",
-        "node-sass": "^4.14.1",
-        "postcss": "^7.0.30",
-        "postcss-load-config": "^2.1.0",
-        "svelte": "^3.22.3",
-        "svelte-preprocess": "^3.7.4",
-        "tailwindcss": "^1.4.6",
-        "typescript": "^3.9.2"
-    }
+    "devDependencies": {}
 }

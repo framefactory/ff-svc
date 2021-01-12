@@ -12,14 +12,8 @@
         "rootDir": "source",
 
         "baseUrl": ".",
-        "paths": {
-            "@ff/core/*": [ "../ff-core/source/*" ]
-        }
     },
     "include": [
         "source/**/*"
-    ],
-    "references": [
-        { "path":  "../ff-core/tsconfig.json" }
     ]
 }
