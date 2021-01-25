@@ -15,7 +15,6 @@
     }
 
     function onDragEnter(event: DragEvent) {
-        console.log(this);
         this.classList.add("dropmark");
     }
 
