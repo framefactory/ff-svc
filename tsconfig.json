@@ -3,7 +3,7 @@
         "composite": true,
         "types": [ "svelte" ],
         "target": "ES6",
-        "module": "ES6",
+        "module": "CommonJS",
         "moduleResolution": "Node",
         "experimentalDecorators": true,
         "sourceMap": true,
@@ -12,8 +12,16 @@
         "rootDir": "source",
 
         "baseUrl": ".",
+        "paths": {
+            "@ff/core/*": [ "../ff-core/source/*" ],
+            "@ff/browser/*": [ "../ff-browser/source/*" ]
+        }
     },
     "include": [
         "source/**/*"
+    ],
+    "references": [
+        { "path": "../ff-core/tsconfig.json" },
+        { "path": "../ff-browser/tsconfig.json" }
     ]
 }
