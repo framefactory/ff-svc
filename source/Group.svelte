@@ -3,13 +3,31 @@
 </script>
 
 <script lang="typescript">
-    import { createEventDispatcher } from "svelte";
+    import { beforeUpdate, createEventDispatcher } from "svelte";
 
+    export let value = "";
+    export let mode: "radio" | "exclusive" = "radio"
     let classes = "";
     export { classes as class };
-    export let mode: "radio" | "exclusive" = "radio"
+
+    let groupElement: HTMLDivElement = null;
 
     const dispatch = createEventDispatcher();
+
+    beforeUpdate(() => {
+        if (groupElement) {
+            groupElement.childNodes.forEach(child => {
+                if (child instanceof HTMLElement) {
+                    if (value && child["value"] === value) {
+                        child.setAttribute("selected", "true");
+                    }
+                    else {
+                        child.removeAttribute("selected");
+                    }
+                }
+            });
+        }
+    });
 
     function onClick(event: MouseEvent) {
         const target = event.target;
@@ -39,7 +57,11 @@
 <!-- MARKUP ------------------------------------------------------------------->
 
 <template>
-    <div on:click={onClick} class={"group " + classes}>
+    <div
+        class={"group " + classes}
+        bind:this={groupElement}
+        on:click={onClick}
+    >
         <slot/>
     </div>
 </template>
