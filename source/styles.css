@@ -1,0 +1,68 @@
+/**
+ * FF Typescript Foundation Library
+ * Copyright 2021 Ralph Wiedemeier, Frame Factory GmbH
+ *
+ * License: MIT
+ */
+ 
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.full {
+    @apply absolute top-0 right-0 bottom-0 left-0;
+}
+.rounded {
+    border-radius: 0.2rem;
+}
+.frame {
+    @apply flex p-1 bg-color-frame;
+}
+.widget {
+    @apply m-2 px-4 py-2 rounded-l rounded-r bg-color-widget text-center;
+}
+.label {
+    @apply m-2;
+}
+.badge {
+    @apply m-2 p-2 rounded-l rounded-r;
+}
+.button {
+    @apply widget cursor-pointer select-none hover:bg-color-widget-hover;
+}
+.button[selected] {
+    @apply bg-color-widget-selected;
+}
+.field-edit {
+    @apply m-2 rounded-l rounded-r cursor-pointer bg-color-back;
+}
+.field-edit-bar {
+    @apply select-none bg-color-widget;
+}
+.field-edit-text {
+    @apply select-none mx-1;
+}
+.group-row {
+    @apply flex flex-row;
+}
+.group-row .button {
+    @apply ml-1 mr-0 rounded-none;
+}
+.group-row .button:first-of-type {
+    @apply ml-2 rounded-l;
+}
+.group-row .button:last-of-type {
+    @apply mr-2 rounded-r;
+}
+.group-col {
+    @apply flex flex-col;
+}
+.group-col .button {
+    @apply mt-1 mb-0 rounded-none;
+}
+.group-col .button:first-of-type {
+    @apply mt-2 rounded-t;
+}
+.group-col .button:last-of-type {
+    @apply mb-2 rounded-b;
+}

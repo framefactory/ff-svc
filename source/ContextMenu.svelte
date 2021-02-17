@@ -5,7 +5,7 @@
   License: MIT
 -->
 
-<script context="module" lang="typescript">
+  <script context="module" lang="typescript">
 </script>
 
 <script lang="typescript">
