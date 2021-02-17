@@ -35,12 +35,15 @@
 <script lang="typescript">
     export let name: string;
     export let size: string = "1em";
+
+    let classes: string = "";
+    export { classes as class };
 </script>
 
 <!-- MARKUP ------------------------------------------------------------------->
 
 <template>
-    <div class="inline-block fill-current" style="height:{size}">
+    <div class={classes + " icon inline-block fill-current"} style="height:{size}">
         {@html icons[name]}
     </div>
 </template>
