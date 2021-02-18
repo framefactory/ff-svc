@@ -4,24 +4,24 @@
         "types": [ "svelte" ],
         "target": "ES6",
         "module": "CommonJS",
-        "moduleResolution": "Node",
         "experimentalDecorators": true,
+        "allowSyntheticDefaultImports": true,
         "sourceMap": true,
 
-        "outDir": "built/export",
-        "rootDir": "source",
+        "outDir": "built/exports",
+        "rootDir": "src",
 
         "baseUrl": ".",
         "paths": {
-            "@ff/core/*": [ "../ff-core/source/*" ],
-            "@ff/browser/*": [ "../ff-browser/source/*" ]
+            "@ff/core/*": [ "../core/src/*" ],
+            "@ff/browser/*": [ "../browser/src/*" ]
         }
     },
     "include": [
-        "source/**/*"
+        "src/**/*"
     ],
     "references": [
-        { "path": "../ff-core/tsconfig.json" },
-        { "path": "../ff-browser/tsconfig.json" }
+        { "path": "../core" },
+        { "path": "../browser" }
     ]
 }
