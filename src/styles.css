@@ -21,9 +21,6 @@
 .label {
     @apply m-2;
 }
-.badge {
-    @apply m-2 p-2 rounded-l rounded-r;
-}
 .button {
     @apply widget text-center cursor-pointer select-none hover:bg-color-widget-hover;
 }

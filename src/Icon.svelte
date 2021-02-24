@@ -43,7 +43,7 @@
 <!-- MARKUP ------------------------------------------------------------------->
 
 <template>
-    <div class={classes + " icon inline-block fill-current"} style="height:{size}">
+    <div class={classes + " icon inline-block fill-current pointer-events-none"} style="height:{size}">
         {@html icons[name]}
     </div>
 </template>
