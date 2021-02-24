@@ -6,14 +6,15 @@
 -->
 
 <script context="module" lang="typescript">
+    import { onMount, createEventDispatcher } from "svelte";
+    
+    import math from "@ff/core/math";
+    import DragTarget from "@ff/browser/DragTarget";
+    
     export type SliderDirection = "horizontal" | "vertical";
 </script>
 
 <script lang="typescript">
-    import { onMount, createEventDispatcher } from "svelte";
-    import math from "@ff/core/math";
-    import DragTarget from "@ff/browser/DragTarget";
-
     export let value = 0;
     export let direction: SliderDirection = "horizontal";
 
