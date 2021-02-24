@@ -29,7 +29,7 @@
 
 <style type="text/css">
     .ff-property {
-        @apply flex mb-1;
+        @apply flex my-2;
     }
     .ff-property-label {
         overflow: hidden;

@@ -303,15 +303,16 @@ import { schemas } from "@ff/core/Property";
         padding: 0 4px;
         border: none;
         text-align: right;
-        @apply rounded bg-color-frame-high;
+        @apply rounded bg-color-frame-low;
     }
     .modal-plane {
         position: fixed;
         top: 0; right: 0; bottom: 0; left: 0;
+        z-index: 10;
     }
     ul {
         position: absolute;
-        z-index: 1;
+        z-index: 11;
         top: 100%;
         right: 0;
         min-width: 100%;
