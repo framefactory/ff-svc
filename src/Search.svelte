@@ -10,14 +10,20 @@
 
 <script lang="typescript">
     import Icon from "./Icon.svelte";
+    export let search: string = "";
+
+    function onClickClear()
+    {
+        search = "";
+    }
 </script>
 
 <!-- MARKUP ------------------------------------------------------------------->
 
 <template>
     <div class="search widget flex items-center">
-        <input type="text" placeholder="Search..."/>
-        <Icon name="close"/>
+        <input type="text" placeholder="Search..." bind:value={search} />
+        <span class="cursor-pointer pt-1" on:click={onClickClear}><Icon name="close"/></span>
     </div>
 </template>
 
